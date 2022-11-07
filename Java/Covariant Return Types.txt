@@ -1,0 +1,38 @@
+
+
+//Complete the classes below
+class Flower {
+    String whatsYourName(){return "I have many names and types.";}
+}
+
+class Jasmine extends Flower{
+    @Override
+    String whatsYourName(){return "Jasmine";}
+}
+
+class Lily extends Flower{
+    @Override
+    String whatsYourName(){return "Lily";}
+}
+
+class Region {
+    Flower yourNationalFlower(){
+        Flower flower = new Flower();
+        return flower;
+    } 
+}
+
+class WestBengal extends Region{
+    Jasmine yourNationalFlower(){
+        Jasmine jasmine = new Jasmine();
+        return jasmine;
+    }
+}
+
+class AndhraPradesh extends Region{
+    Lily yourNationalFlower(){
+        Lily lily = new Lily();
+        return lily;
+    }
+}
+

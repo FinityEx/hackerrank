@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+
+        
+        int n = sc.nextInt();
+        sc.nextLine();
+        Map<String, Integer> mp = new HashMap<String, Integer>(n);
+        for(int i = 0; i < n; i++){
+            String s = sc.nextLine();
+            int number = sc.nextInt();
+            sc.nextLine();
+            mp.put(s, number);
+        }
+        while(sc.hasNextLine()){
+            String search = sc.nextLine();
+            if(mp.containsKey(search)){
+                System.out.println(search + "=" + mp.get(search));
+            }
+            else System.out.println("Not found");
+        }
+    }
+}

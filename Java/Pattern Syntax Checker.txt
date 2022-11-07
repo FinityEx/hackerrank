@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int N = Integer.parseInt(sc.nextLine());
+        String[] ar = new String[N];
+        for(int i = 0; i < N; i++){
+            ar[i] = sc.nextLine();
+        }
+        for(String x : ar){
+            //System.out.println(x);
+            try{
+                Pattern p = Pattern.compile(x);
+                System.out.println("Valid");
+            }
+            catch(PatternSyntaxException e){
+                System.out.println("Invalid");
+            }
+        }
+    }
+}

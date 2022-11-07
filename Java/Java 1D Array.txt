@@ -1,0 +1,5 @@
+
+        int[] a = new int[n];
+        for(int x = 0; x < n; x++){
+            a[x] = scan.nextInt();
+        }
