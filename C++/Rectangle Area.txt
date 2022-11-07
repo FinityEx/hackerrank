@@ -1,0 +1,22 @@
+
+/*
+ * Create classes Rectangle and RectangleArea
+ */
+class Rectangle{
+    public:
+        int width, height;
+        void display(){
+            std::cout << width << " " << height << std::endl;
+        }
+    
+};
+
+class RectangleArea : public Rectangle{
+    public:
+        void read_input(){
+            std::cin >> Rectangle::width >> Rectangle::height;
+        }
+        void display(){
+            std::cout << Rectangle::width * Rectangle::height;
+        }
+};

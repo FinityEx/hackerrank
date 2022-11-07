@@ -1,0 +1,9 @@
+
+int pageCount(int n, int p) {
+    int i, k;
+    if (n == p + 1 && n % 2 == 0) i = 1;
+    else i = (n - p) / 2;
+    k = p / 2;
+    if (i < k) return i;
+    else return k;
+}

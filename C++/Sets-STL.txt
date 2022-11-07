@@ -1,0 +1,30 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    set<int> s;
+    int Q; cin>>Q;
+    int type, x;
+    while(Q--){
+        cin >> type >> x;
+        if (type == 1) s.insert(x);
+        else if(type == 2) s.erase(x);
+        else{
+            set<int>::iterator it;
+            it = s.find(x);
+            if (it == s.end()) cout << "No\n";
+            else cout << "Yes" << endl;
+        }
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    return 0;
+}
+
+
+

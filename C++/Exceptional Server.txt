@@ -1,0 +1,15 @@
+
+        try {
+            cout << Server::compute(A, B) << endl;
+            
+            }
+        catch (std::bad_alloc& c) {
+            cout << "Not enough memory" << endl;
+        }
+        catch (std::exception& ex) {
+            cout << "Exception: " << ex.what() << endl;
+        }
+        catch (...) {
+            cout << "Other Exception" << endl;
+        }
+        

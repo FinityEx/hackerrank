@@ -1,0 +1,50 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <sstream>
+#include <string>
+
+using std::cout;
+using std::cin;
+using std::string;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    size_t ints{};
+    size_t queries{};
+    int num{};
+    string line{};
+
+    std::vector <int> numbers{};
+    cin >> ints;
+    
+    std::vector<int>::iterator low;
+
+    std::vector<int> vec{};
+    while (cin >> num) {
+        numbers.push_back(num);
+        if (numbers.size() == ints) break;
+    }
+
+    cin >> queries;
+    while (cin >> num) {
+        vec.push_back(num);
+        if (vec.size() == queries) break;
+    }
+    for (size_t k{ 0 }; k < queries; k++) {
+        num = vec[k];
+        low = std::lower_bound(numbers.begin(), numbers.end(), num);
+        if (numbers[low - numbers.begin()] == num) { 
+            cout << "Yes " << (low - numbers.begin() + 1) << "\n";
+        }
+        else {
+            cout << "No " << (low - numbers.begin() + 1) << "\n";
+        }
+
+    }
+
+    return 0;
+}

@@ -1,0 +1,36 @@
+
+
+class D : public A, B, C
+{
+    int itA{}, itB{}, itC{};
+	int val;
+	public:
+		//Initially val is 1
+		 D()
+		 {
+		 	val = 1;
+		 }
+
+
+		 //Implement this function
+		 void update_val(int new_val)
+		 {
+             int valu = new_val;
+            while(valu%5 == 0){
+                valu = valu/5;
+                C::func(val);
+            }
+            while(valu%3 == 0){
+                valu = valu / 3;
+                B::func(val);
+            }
+            while(valu%2 ==0){
+                valu = valu / 2;
+                A::func(val);
+            }
+			
+		 }
+		 //For Checking Purpose
+		 void check(int); //Do not delete this line.
+};
+
